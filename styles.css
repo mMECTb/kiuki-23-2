@@ -1,4 +1,4 @@
-.white-square {
+.white_box {
             width: 400px;
             height: 400px;
             background-color: white;
@@ -16,13 +16,13 @@
             margin-top: 10px;
         }
 
-        .blue {
+        .box {
             width: 80px;
             height: 80px;
             background-color: navy;
         }
 
-        .blue-rect {
+        .box_big {
             width: 80px;
             height: 160px;
             background-color: navy;
@@ -35,49 +35,9 @@
             height: 100vh;
         }
 
+.custom-list li::before { content: "➤ "; color: blue; }
 
-        .yellow-square {
-            float: right;
-            width: 100px;
-            height: 100px;
-            background: #fd0;
-            border: 1px solid black;
-
-        }
-
-        .text-content {
-            font-size: 16px;
-            line-height: 1.5;
-            
-        }
-
-
-        .red-square {
-    width: 50px;
-    height: 50px;
-    background-color: red;
-    position: fixed;
-    left: 100px;
-    top: 100px;
-        }
-      
-
-.custom-list {
-    list-style: none; 
-    padding-left: 0; 
-}
-
-.custom-list li {
-    position: relative;
-    padding-left: 25px;
-    margin-bottom: 10px;
-}
-
-
-.custom-list li::before {
-    content: "$"; 
-    position: absolute;
-    left: 0;
-    color: #0884ff; 
-    font-size: 18px; 
+img {
+    width: 300px;
+    height: 200px;
 }
