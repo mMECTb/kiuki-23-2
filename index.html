@@ -1,122 +1,105 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Лабораторна робота №1</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href=".\styles.css">
+
 </head>
 <body>
-  <table width="100%" border="0" cellspacing="10">
-    <tr valign="top">
-      <td width="75%">
-        <a id="top"></a>
-        <h1 id="intro">Основи побудови та публікації HTML-документів</h1>
-        <h2 id="text">Оформлений текст</h2>
-        <p>
-          Для будь-якого натурального числа <strong>n>2</strong> рівняння <em>a<sup>n</sup>+b<sup>n</sup>=c<sup>n</sup></em> <strong>не має рішень</strong> при ненульових числах a, b, c.
-        </p>
+    <h1 style="color: red; font-size: 18px;">Гітіс М Ю КІУКІ-23-2 Лаб1</h1>
+    <p><b>E=mc<sup>2</sup>,</b> де <b>E -</b> енергія об’єкта, <b>m -</b> маса, <b>c -</b> швидкість світла у вакуумі, що дорівнює 299 792 458 <i>м/с</i></p>
 
-        <h2 id="university">Структура університету</h2>
-        <ul>
-          <li>Факультет природничих наук
-            <ul>
-              <li>Кафедра біології</li>
-              <li>Кафедра хімії</li>
-            </ul>
-          </li>
-          <li>Факультет інженерії
-            <ul>
-              <li>Кафедра комп'ютерних наук
-                <ul>
-                  <li>Кафедра алгоритмів</li>
-                  <li>Кафедра штучного інтелекту</li>
-                </ul>
-              </li>
-              <li>Кафедра електротехніки</li>
-            </ul>
-          </li>
-          <li>Факультет гуманітарних наук
-            <ul>
-              <li>Кафедра історії</li>
-              <li>Кафедра філології</li>
-            </ul>
-          </li>
-        </ul>
+    <br><br><br>
 
-        <h2 id="currency">Таблиця: Курс валют</h2>
-        <table border="1" cellpadding="6" cellspacing="0">
-          <caption><strong>Курси валют на 06.10.2025</strong></caption>
-          <thead>
-            <tr>
-              <th>Валюта</th>
-              <th>Код</th>
-              <th>Купівля</th>
-              <th>Продаж</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Долар США</td>
-              <td>USD</td>
-              <td>41,29</td>
-              <td>41,60</td>
-            </tr>
-            <tr>
-              <td>Євро</td>
-              <td>EUR</td>
-              <td>48,18</td>
-              <td>48,90</td>
-            </tr>
-            <tr>
-              <td>Фунт стерлінгів</td>
-              <td>GBP</td>
-              <td>50.50</td>
-              <td>51.30</td>
-            </tr>
-          </tbody>
-        </table>
+    <!-- Додано жовтий квадрат і текст з float -->
+    <div class="text-content">
+        <div class="yellow-square"></div>
+        <p><b>E=mc<sup>2</sup>,</b> де <b>E</b> - енергія об’єкта, <b>m</b> - маса, <b>c</b> - швидкість світла у вакуумі, що дорівнює 299 792 458 <i>м/с</i></p>
+    </div>
 
-        <h2 id="voting">Форма: Голосування</h2>
-        <form method="post" action="#">
-          <fieldset>
-            <legend>За кого голосуєте?</legend>
-            <label><input type="radio" name="vote" value="A"> <big>Дмитро Корчинський</big></label><br>
-            <label><input type="radio" name="vote" value="B"> <small>Бутерброд з чаєм</small></label><br>
-            <label><input type="radio" name="vote" value="C"> <small>Shadow Fiend</small></label><br>
-          </fieldset>
-          <p>
-            <input type="submit" value="Проголосувати">
-            <input type="reset" value="Очистити">
-          </p>
-        </form>
+    <br><br><br>
 
-        <h2 id="contacts">Контакти та корисні посилання</h2>
-        <p>Офіційний сайт: <a href="https://dl.nure.ua/" target="_blank" rel="noopener">DLNure</a></p>
+    <select name="Завдання 2.Список бригад">
+        <optgroup label="Бригада 1">
+            <option value="id1.1">Гітіс Микола Юрійович</option>
+            <option value="id1.2">Ніколаєнко Юлія Тимофіївна</option>
+            <option value="id1.3">Коржик Денис Володимирович</option>
+        </optgroup>
+        <optgroup label="Бригада 2">
+            <option value="id2.1">Сподіваюсь на високу оцінку</option>
+            <option value="2.2">Код взяв з мови розмітки з ДЛ</option>
+        </optgroup>
+    </select>
 
-        <hr>
-        <p><a href="#top">Повернутися вгору</a></p>
-      </td>
+    <br><br><br>
 
-      <td width="25%">
-        <h2>Зміст</h2>
-        <ul>
-          <li><a href="#intro">Вступ</a></li>
-          <li><a href="#text">Оформлений текст</a></li>
-          <li><a href="#university">Структура університету</a></li>
-          <li><a href="#currency">Курс валют</a></li>
-          <li><a href="#voting">Голосування</a></li>
-          <li><a href="#contacts">Контакти</a></li>
-        </ul>
-        <hr>
-        <p><a href="#top">Повернутися до початку</a></p>
-        <p><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdUPbmD5f2ZBU1wyK6juVlzi70v0P_WK7YtA&s" alt="Бебра" /></p>
-      </td>
-    </tr>
-  </table>
+    <table width="500" border="1">
+        <caption>Заголовок таблиці, необов’язковий.</caption>
+        <tr>
+            <th>Заголовок 1. Назва розділів</th>
+            <th>Заголовок 2. Текст та номер сторінки</th>
+        </tr>
+        <tr>
+            <td align="center">Розділ 1. Internet технології Мова розмітки HTML. Тіло документу</td>
+            <td>Сторінка 14. Атрибути тегів<br>• colspan – визначає об'єднання комірок по горизонталі.
+            <br>• rowspan – визначає вертикальне об'єднання комірок.
+            Основна функція таблиць в HTML – представлення табличних даних, але
+            також таблиці інколи використовуються для визначення структури тіла
+            документа. Табличне верстання вважається застарілим та не рекомендується.</td>
+        </tr>
+        <tr>
+            <td align="center">Розділ 2. Керуючі елементи "select"</td>
+            <td>Сторінка 8. select дозволяє створити елемент інтерфейсу у вигляді списку, що
+            розкривається, а також список з одним або множинним вибором. Кожен пункт
+            створюється за допомогою елемента option, який має бути вкладений у
+            контейнер select.</td>
+        </tr>
+    </table>
 
-  <footer>
-    <p>Лабораторна робота №1
-    <br>Ткаченко Вячеслав Олександрович
-    <br>КІУКІ-23-2</p>
-  </footer>
+    <br><br><br>
+
+    <form>
+        <label for="FIO">Введіть ФІО студента</label><br>
+        <input type="text" id="FIO" name="student_fio">
+        <br><br>
+        <label for="information_abt_student">Введіть інформацію про студента</label><br>
+        <input type="text" id="information_abt_student" name="student_info" size="60">
+        <br><br>
+        <input type="submit" value="Зберегти інформацію">
+    </form>
+
+    <br><br><br>
+
+    <a href="../extra_lb1.html">Перейти до наступного вікна</a>
+    <br><br>
+
+    <div class="center">
+        <div class="white-square">
+            <div class="row">
+                <div class="blue"></div>
+                <div class="blue-rect"></div>
+                <div class="blue"></div>
+            </div>
+            <div class="row">
+                <div class="blue"></div>
+                <div class="blue"></div>
+                <div class="blue"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="red-square"></div>
+
+
+    <br><br><br>
+
+
+<ul class="custom-list">
+    <li>Gitis</li>
+    <li>Mykola</li>
+    <li>19 10 2006</li>
+</ul>
 </body>
 </html>
