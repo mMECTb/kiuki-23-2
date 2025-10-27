@@ -1,105 +1,121 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href=".\styles.css">
+    <title>Демонстрація використання CSS</title>
 
+    <!-- Підключення зовнішнього CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Вбудований CSS у контейнері <style> -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        nav {
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        nav a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        /* Приклад позиціонування */
+        #note {
+            position: absolute;
+            top: 150px;
+            right: 30px;
+            background-color: #fffae6;
+            border: 1px solid #e6c300;
+            padding: 10px;
+            width: 150px;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+        }
+
+        /* Приклад float */
+        .image-left {
+            float: left;
+            margin: 10px 20px 10px 0;
+            border-radius: 8px;
+        }
+
+        footer {
+            clear: both;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 30px;
+        }
+    </style>
 </head>
 <body>
-    <h1 style="color: red; font-size: 18px;">Гітіс М Ю КІУКІ-23-2 Лаб1</h1>
-    <p><b>E=mc<sup>2</sup>,</b> де <b>E -</b> енергія об’єкта, <b>m -</b> маса, <b>c -</b> швидкість світла у вакуумі, що дорівнює 299 792 458 <i>м/с</i></p>
 
-    <br><br><br>
+    <header>
+        <h1>Мій перший HTML-документ з CSS</h1>
+    </header>
 
-    <!-- Додано жовтий квадрат і текст з float -->
-    <div class="text-content">
-        <div class="yellow-square"></div>
-        <p><b>E=mc<sup>2</sup>,</b> де <b>E</b> - енергія об’єкта, <b>m</b> - маса, <b>c</b> - швидкість світла у вакуумі, що дорівнює 299 792 458 <i>м/с</i></p>
-    </div>
+    <nav>
+        <a href="#">Головна</a>
+        <a href="#">Про мене</a>
+        <a href="#">Контакти</a>
+    </nav>
 
-    <br><br><br>
+    <div class="content">
+        <h2>Вступ</h2>
+        <p>Це приклад документа, на якому демонструється <strong>використання каскадних таблиць стилів (CSS)</strong>.
+        Нижче ви бачите елементи з різними типами оформлення.</p>
 
-    <select name="Завдання 2.Список бригад">
-        <optgroup label="Бригада 1">
-            <option value="id1.1">Гітіс Микола Юрійович</option>
-            <option value="id1.2">Ніколаєнко Юлія Тимофіївна</option>
-            <option value="id1.3">Коржик Денис Володимирович</option>
-        </optgroup>
-        <optgroup label="Бригада 2">
-            <option value="id2.1">Сподіваюсь на високу оцінку</option>
-            <option value="2.2">Код взяв з мови розмітки з ДЛ</option>
-        </optgroup>
-    </select>
+        <!-- Inline стиль -->
+        <p style="color: darkred; font-weight: bold;">Цей абзац стилізований за допомогою inline-стилю (атрибут style).</p>
 
-    <br><br><br>
+        <!-- Зображення з float -->
+        <img src="https://picsum.photos/200" alt="Випадкове зображення" class="image-left">
+        <p>Тут зображення вирівняне ліворуч за допомогою властивості <code>float: left;</code>.
+        Текст обтікає його навколо. Це зручно для створення гарних новинних блоків або сторінок із контентом.</p>
+        <p>Після закінчення тексту можна додати елементи, які очищають потік і розміщуються нижче.</p>
 
-    <table width="500" border="1">
-        <caption>Заголовок таблиці, необов’язковий.</caption>
-        <tr>
-            <th>Заголовок 1. Назва розділів</th>
-            <th>Заголовок 2. Текст та номер сторінки</th>
-        </tr>
-        <tr>
-            <td align="center">Розділ 1. Internet технології Мова розмітки HTML. Тіло документу</td>
-            <td>Сторінка 14. Атрибути тегів<br>• colspan – визначає об'єднання комірок по горизонталі.
-            <br>• rowspan – визначає вертикальне об'єднання комірок.
-            Основна функція таблиць в HTML – представлення табличних даних, але
-            також таблиці інколи використовуються для визначення структури тіла
-            документа. Табличне верстання вважається застарілим та не рекомендується.</td>
-        </tr>
-        <tr>
-            <td align="center">Розділ 2. Керуючі елементи "select"</td>
-            <td>Сторінка 8. select дозволяє створити елемент інтерфейсу у вигляді списку, що
-            розкривається, а також список з одним або множинним вибором. Кожен пункт
-            створюється за допомогою елемента option, який має бути вкладений у
-            контейнер select.</td>
-        </tr>
-    </table>
+        <!-- Елемент з позиціонуванням -->
+        <div id="note">
+            <strong>Нотатка:</strong><br>
+            Цей блок має <code>position: absolute;</code>.
+        </div>
 
-    <br><br><br>
-
-    <form>
-        <label for="FIO">Введіть ФІО студента</label><br>
-        <input type="text" id="FIO" name="student_fio">
-        <br><br>
-        <label for="information_abt_student">Введіть інформацію про студента</label><br>
-        <input type="text" id="information_abt_student" name="student_info" size="60">
-        <br><br>
-        <input type="submit" value="Зберегти інформацію">
-    </form>
-
-    <br><br><br>
-
-    <a href="../extra_lb1.html">Перейти до наступного вікна</a>
-    <br><br>
-
-    <div class="center">
-        <div class="white-square">
-            <div class="row">
-                <div class="blue"></div>
-                <div class="blue-rect"></div>
-                <div class="blue"></div>
-            </div>
-            <div class="row">
-                <div class="blue"></div>
-                <div class="blue"></div>
-                <div class="blue"></div>
-            </div>
+        <div class="extra-content">
+            <h3>Додатковий розділ</h3>
+            <p>Тут можна продемонструвати роботу класів, ідентифікаторів і тегів.</p>
         </div>
     </div>
 
-    <div class="red-square"></div>
-
-
-    <br><br><br>
-
-
-<ul class="custom-list">
-    <li>Gitis</li>
-    <li>Mykola</li>
-    <li>19 10 2006</li>
-</ul>
+    <footer>
+        &copy; 2025 Мій сайт. Усі права захищено.
+    </footer>
 </body>
 </html>
