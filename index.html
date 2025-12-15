@@ -1,170 +1,36 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Лабораторна робота №2</title>
-
-  <link rel="stylesheet" href="styles.css">
-
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f2f2f2;
-      margin: 0;
-      padding: 0;
-    }
-
-    header {
-      background-color: #4CAF50;
-      color: white;
-      text-align: center;
-      padding: 20px 0;
-    }
-
-    nav {
-      background-color: #333;
-      overflow: hidden;
-    }
-
-    nav a {
-      float: left;
-      display: block;
-      color: #f2f2f2;
-      text-align: center;
-      padding: 14px 20px;
-      text-decoration: none;
-    }
-
-    nav a:hover {
-      background-color: #ddd;
-      color: black;
-    }
-
-    .content {
-      padding: 20px;
-    }
-
-    #note {
-      position: absolute;
-      top: 150px;
-      right: 30px;
-      background-color: #fffae6;
-      border: 1px solid #e6c300;
-      padding: 10px;
-      width: 150px;
-      box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
-    }
-
-    .image-left {
-      float: left;
-      margin: 10px 20px 10px 0;
-      border-radius: 8px;
-    }
-
-    footer {
-      clear: both;
-      background-color: #333;
-      color: white;
-      text-align: center;
-      padding: 10px 0;
-      margin-top: 30px;
-    }
-
-    .custom-list {
-      list-style: none;
-      padding-left: 0;
-    }
-
-    .custom-list li {
-      position: content;
-      padding-left: 25px;
-      margin-bottom: 10px;
-    }
-
-
-    .flex-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-content: center;
-      width: 300px;
-      height: 300px;
-      background-color: #fff3d6;
-      margin: 20px auto;
-      padding: 10px;
-    }
-
-    .box {
-      width: 80px;
-      height: 80px;
-      background-color: navy;
-      margin: 10px;
-    }
-
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Шифр Цезаря</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="app-container">
+        <h2>Шифр Цезаря</h2>
 
-  <header>
-    <h1>Лабораторна робота №2</h1>
-  </header>
+        <div class="input-group">
+            <label for="textInput">Текст:</label>
+            <textarea id="textInput" placeholder="Введіть текст латиницею..."></textarea>
+        </div>
 
-  <nav>
-    <a href="#">Головна</a>
-    <a href="#">Про мене</a>
-    <a href="#">Контакти</a>
-  </nav>
+        <div class="input-group">
+            <label for="shiftKey">Ключ (зсув):</label>
+            <input type="number" id="shiftKey" value="1">
+        </div>
 
-  <div class="content">
-    <h2>Вступ</h2>
-    <p>Це приклад документа, що демонструє <strong>усі основні способи використання CSS</strong> — inline, внутрішній і зовнішній.</p>
+        <div class="buttons">
+            <button onclick="encrypt()">Зашифрувати</button>
+            <button onclick="decrypt()">Розшифрувати</button>
+        </div>
 
-
-    <p style="color: darkred; font-weight: bold;">Цей абзац оформлено за допомогою inline-стилю.</p>
-
-
-    <img src="https://i.ytimg.com/vi/qdRDSIrBqqY/maxresdefault.jpg" alt="Зображення" class="image-left">
-    <p>Зображення вирівняне ліворуч за допомогою <code>float: left;</code>. Текст обтікає його навколо.</p>
-
-    <div id="note">
-      <strong>Нотатка:</strong><br>
-      Цей блок позиціоновано за допомогою <code>position: absolute;</code>.
-    </div>
-
-    <div class="extra-content">
-      <h3>Додатковий розділ</h3>
-      <p>Нижче наведено приклади списку з власним маркером та Flexbox-контейнера.</p>
-    </div>
-
-    <h3>Список із власним маркером</h3>
-    <ul class="custom-list">
-      <li>HTML — структура сторінки</li>
-      <li>CSS — оформлення</li>
-      <li>JavaScript — динаміка</li>
-    </ul>
-
-    <h3>Flexbox контейнер</h3>
-    <p>Елементи розміщені відповідно до зразка:</p>
-    <div class="center">
-        <div class="white_box">
-            <div class="row">
-                <div class="box"></div>
-                <div class="box_big"></div>
-                <div class="box"></div>
-            </div>
-            <div class="row">
-                <div class="box"></div>
-                <div class="box"></div>
-                <div class="box"></div>
-            </div>
+        <div class="output-group">
+            <h3>Результат:</h3>
+            <div id="resultOutput" class="result-box"></div>
         </div>
     </div>
 
-  </div>
-
-  <footer>
-    &copy; Вячеслав Ткаченко КІУКІ-23-2
-  </footer>
+    <script src="script.js"></script>
 </body>
 </html>
