@@ -1,42 +1,36 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Шифр Цезаря</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <title>Caesar Cipher</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+    <div class="container">
+        <h1>Caesar Cipher</h1>
 
-    <div class="card">
-        <h1>Шифр Цезаря</h1>
-
-        <div class="form-group">
-            <label for="textInput">Текст:</label>
-            <textarea id="textInput" placeholder="Введіть текст тут..."></textarea>
+        <div class="input-group">
+            <label for="textInput">Enter text:</label>
+            <textarea id="textInput" placeholder="Type your text here..."></textarea>
         </div>
 
-        <div class="form-group">
-            <label for="shiftKey">Ключ (зсув):</label>
-            <div class="input-wrapper">
-                <input type="number" id="shiftKey" value="1" min="1">
-            </div>
+        <div class="input-group">
+            <label for="shiftInput">Key:</label>
+            <input type="number" id="shiftInput" value="3" min="1" max="25">
         </div>
 
         <div class="button-group">
-            <button class="btn btn-primary" onclick="encrypt()">Зашифрувати</button>
-            <button class="btn btn-secondary" onclick="decrypt()">Розшифрувати</button>
+            <button id="encryptBtn" class="btn encrypt">Encrypt</button>
+            <button id="decryptBtn" class="btn decrypt">Decrypt</button>
         </div>
 
-        <div class="result-section">
-            <h3>Результат:</h3>
-            <div id="resultOutput" class="result-box">Тут з'явиться результат...</div>
+        <div class="output-group">
+            <label>Result:</label>
+            <div id="resultOutput" class="result-box">...</div>
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="./script.js"></script>
 </body>
 </html>

@@ -1,40 +1,39 @@
-function caesarCipher(str, shift) {
+document.addEventListener('DOMContentLoaded', () => {
+    const textInput = document.getElementById('textInput');
+    const shiftInput = document.getElementById('shiftInput');
+    const resultOutput = document.getElementById('resultOutput');
+    const encryptBtn = document.getElementById('encryptBtn');
+    const decryptBtn = document.getElementById('decryptBtn');
 
-    if (shift < 0) {
-        return caesarCipher(str, shift + 26);
-    }
-
-    let output = '';
-
-    for (let i = 0; i < str.length; i++) {
-        let char = str[i];
-
-        if (char.match(/[a-z]/i)) {
-            const code = str.charCodeAt(i);
-
-            if (code >= 65 && code <= 90) {
-                char = String.fromCharCode(((code - 65 + shift) % 26) + 65);
-            }
-            else if (code >= 97 && code <= 122) {
-                char = String.fromCharCode(((code - 97 + shift) % 26) + 97);
-            }
+    function caesarCipher(text, shift, isDecrypt = false) {
+        if (isDecrypt) {
+            shift = -shift;
         }
-        output += char;
+
+        return text.split('').map(char => {
+            if (char.match(/[a-z]/i)) {
+                const code = char.charCodeAt(0);
+
+                const base = (code >= 65 && code <= 90) ? 65 : 97;
+
+                return String.fromCharCode(((code - base + shift) % 26 + 26) % 26 + base);
+            }
+
+            return char;
+        }).join('');
     }
 
-    return output;
-}
+    encryptBtn.addEventListener('click', () => {
+        const text = textInput.value;
+        const shift = parseInt(shiftInput.value) || 0;
+        const encrypted = caesarCipher(text, shift, false);
+        resultOutput.innerText = encrypted;
+    });
 
-function encrypt() {
-    const text = document.getElementById('textInput').value;
-    const key = parseInt(document.getElementById('shiftKey').value) || 0;
-    const result = caesarCipher(text, key);
-    document.getElementById('resultOutput').textContent = result;
-}
-
-function decrypt() {
-    const text = document.getElementById('textInput').value;
-    const key = parseInt(document.getElementById('shiftKey').value) || 0;
-    const result = caesarCipher(text, (26 - (key % 26)));
-    document.getElementById('resultOutput').textContent = result;
-}
+    decryptBtn.addEventListener('click', () => {
+        const text = textInput.value;
+        const shift = parseInt(shiftInput.value) || 0;
+        const decrypted = caesarCipher(text, shift, true);
+        resultOutput.innerText = decrypted;
+    });
+});
