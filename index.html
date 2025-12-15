@@ -4,30 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Шифр Цезаря</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="app-container">
-        <h2>Шифр Цезаря</h2>
 
-        <div class="input-group">
+    <div class="card">
+        <h1>Шифр Цезаря</h1>
+
+        <div class="form-group">
             <label for="textInput">Текст:</label>
-            <textarea id="textInput" placeholder="Введіть текст латиницею..."></textarea>
+            <textarea id="textInput" placeholder="Введіть текст тут..."></textarea>
         </div>
 
-        <div class="input-group">
+        <div class="form-group">
             <label for="shiftKey">Ключ (зсув):</label>
-            <input type="number" id="shiftKey" value="1">
+            <div class="input-wrapper">
+                <input type="number" id="shiftKey" value="1" min="1">
+            </div>
         </div>
 
-        <div class="buttons">
-            <button onclick="encrypt()">Зашифрувати</button>
-            <button onclick="decrypt()">Розшифрувати</button>
+        <div class="button-group">
+            <button class="btn btn-primary" onclick="encrypt()">Зашифрувати</button>
+            <button class="btn btn-secondary" onclick="decrypt()">Розшифрувати</button>
         </div>
 
-        <div class="output-group">
+        <div class="result-section">
             <h3>Результат:</h3>
-            <div id="resultOutput" class="result-box"></div>
+            <div id="resultOutput" class="result-box">Тут з'явиться результат...</div>
         </div>
     </div>
 
